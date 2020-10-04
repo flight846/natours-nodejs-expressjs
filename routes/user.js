@@ -20,7 +20,7 @@ router.get(
     userController.getProfile
 );
 
-router.patch('/updateProfile', userController.uploadUserPhoto, userController.updateProfile);
+router.patch('/updateProfile', userController.uploadUserPhoto, userController.resizeUserPhoto, userController.updateProfile);
 router.delete('/deleteProfile', userController.deleteProfile);
 
 // All routes after this point requires admin permission
